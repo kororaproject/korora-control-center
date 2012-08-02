@@ -14,6 +14,7 @@ SUBDIRS= \
 	universal-access \
 	user-accounts \
 	datetime \
+	drivers \
 	wacom
 
 if BUILD_PRINTERS

@@ -131,6 +131,7 @@ PKG_CHECK_MODULES(WACOM_PANEL, $COMMON_MODULES
                   gnome-settings-daemon >= $GSD_REQUIRED_VERSION
                   xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
                   gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION)
+PKG_CHECK_MODULES(DRIVERS_PANEL, $COMMON_MODULES)
 
 GDESKTOP_PREFIX=`$PKG_CONFIG --variable prefix gsettings-desktop-schemas`
 AC_SUBST(GDESKTOP_PREFIX)
@@ -199,6 +200,9 @@ else
    have_cheese=no
 fi
 AM_CONDITIONAL(BUILD_CHEESE, test x${have_cheese} = xyes)
+
+# TODO: Check for jockey-backend
+
 
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)
@@ -412,6 +416,8 @@ panels/user-accounts/data/icons/Makefile
 panels/wacom/Makefile
 panels/wacom/calibrator/Makefile
 panels/wacom/gnome-wacom-panel.desktop.in
+panels/drivers/Makefile
+panels/drivers/gnome-drivers-panel.desktop.in
 po/Makefile.in
 shell/Makefile
 shell/gnome-control-center.desktop.in

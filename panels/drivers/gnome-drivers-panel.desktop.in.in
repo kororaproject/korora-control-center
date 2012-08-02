@@ -1,0 +1,17 @@
+[Desktop Entry]
+_Name=Drivers
+_Comment=Proprietary driver settings
+Exec=gnome-control-center drivers
+Icon=jockey
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Settings;X-GNOME-Settings-Panel;HardwareSettings
+OnlyShowIn=GNOME;Unity;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-control-center
+X-GNOME-Bugzilla-Component=drivers
+X-GNOME-Bugzilla-Version=@VERSION@
+X-GNOME-Settings-Panel=drivers
+# Translators: those are keywords for the drivers control-center panel
+_Keywords=Driver;
