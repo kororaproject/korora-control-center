@@ -519,13 +519,9 @@ cc_drivers_panel_init (CcDriversPanel *prefs)
 
   /* assign buttons */
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
-                                               "toolbutton_driver_enable"));
+                                               "toolbutton_driver_toggle"));
   g_signal_connect (widget, "clicked",
                     G_CALLBACK (gcm_prefs_profile_add_cb), prefs);
-  widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
-                                               "toolbutton_driver_disable"));
-  g_signal_connect (widget, "clicked",
-                    G_CALLBACK (gcm_prefs_profile_remove_cb), prefs);
 
   /* create device tree view */
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
